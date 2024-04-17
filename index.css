@@ -1,0 +1,267 @@
+/* All the code for the navigation bar was taken from the following youtube video
+(this includes the media queries) https://www.youtube.com/watch?v=3-2Pj5hxwrw&t=2205s
+The navigation bar code in the other files for the other pages is the same code used here */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    background: black;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar-logo {
+    background-color: tomato;
+    background-image: linear-gradient(to top, red 0%, tomato 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar-item {
+    height: 80px;
+}
+
+.navbar-links {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    text-decoration: none;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.navbar-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #333333;
+    background: -webkit-linear-gradient(to right, #dd1818, #333333);
+    background: linear-gradient(to right, #dd1818, #333333);
+    color: black;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.navbar-links:hover {
+    color: purple;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 960px) {
+    .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar-menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: -1;
+    }
+
+    .navbar-menu.active {
+        background: black;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 60vh;
+        font-size: 1.6rem;
+    }
+
+    #navbar-logo {
+        padding-left: 25px;
+    }
+
+    .navbar-toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: white;
+    }
+
+    .navbar-item {
+        width: 100%;
+    }
+
+    .navbar-links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    .navbar_btn {
+        padding-bottom: 2rem;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar-toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/* The code from here onward was done by myself */
+.main {
+    background: #000428;
+    background: -webkit-linear-gradient(to right, #004e92, #020c69);
+    background: linear-gradient(to right, #004e92, #020c69);
+    padding: 225px 0;
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
+    max-width: 1300px;
+    width: 90%;
+    margin: 0 auto;
+    height: 90%;
+    padding: 88px 10px;
+}
+
+.heading {
+position: absolute;
+top: 250px;
+padding: 0 0 0 450px;
+font-weight: bold;
+color: rgb(152, 40, 40);
+font-size: 20px;
+}
+
+.main-images {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 100%;
+}
+
+.image {
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+}
+
+@media screen and (max-width: 1023px) {
+    .heading {
+        padding: 0 0 0 250px;
+    }
+
+    .image {
+        width: 220px;
+    }
+}
+
+@media screen and (max-width: 917px){
+    .heading {
+        padding: 0 0 0 100px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 757px) {
+    .image {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 595px) {
+    .heading {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 501px) {
+    .heading {
+        font-size: 10px;
+        padding: 0 0 0 50px;
+    }
+}
+
+@media screen and (max-width: 429px) {
+    .main-images {
+    }
+}

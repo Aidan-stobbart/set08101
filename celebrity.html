@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    <title>Quizzard</title>
+    <link rel="stylesheet" href="celebrity.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" id="navbar-logo">QUIZZARD</a>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar-menu">
+                <li class="navbar-item">
+                    <a href="index.html" class="navbar-links" id="home-page">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="music.html" class="navbar-links" id="music-quiz">Music Quiz</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="movie.html" class="navbar-links" id="movie-quiz">Movie Quiz</a>
+                </li>
+                <li class="navbar-btn">
+                    <button class="button" id="stats" onclick="stats()">Stats</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main -->
+    <div class="main">
+        <div class="main-container">
+            <div class="heading-container">
+                <div class="heading">
+                    <h1>Celebrity Quiz</h1>
+                </div>
+                <div>
+                    <p class="word-points">Points: </p>
+                    <p id="points"></p>
+                </div>
+            </div>
+            <ul class="facts">
+                <li class="hint" id="fact1-1">1) He auditioned for captain america: civil war but lost out to Tom Holland</li>
+                <li class="hint" id="fact1-2">2) In high school he dated Madonna's daughter (his classmate)</li>
+                <li class="hint" id="fact1-3">3) As of 2022 he's been in 5 films nominated for best picture</li>
+                <li class="hint" id="fact1-4">4) He uses a french passport</li>
+                <li class="hint" id="fact1-5">5) Grew up in the same appartment building as Alica Keys. Samuel L. Jackson was also a security guard there</li>
+                <li class="hint" id="fact1-6">6) He is the son of Marc Chalemet</li>
+            </ul>
+            <div class="answer">
+                <label for="guess">Answer:</label>
+                <input type="text" class="box" id="guess" value="">
+                <button id="submit" onclick="calcPoints()">Submit</button>
+            </div>
+            <div class="show-facts">
+                <button id="fact2" onclick="showFact2()">Fact 2</button>
+                <button id="fact3" onclick="showFact3()">Fact 3</button>
+                <button id="fact4" onclick="showFact4()">Fact 4</button>
+                <button id="fact5" onclick="showFact5()">Fact 5</button>
+                <button id="fact6" onclick="showFact6()">Fact 6</button>
+            </div>
+        </div>
+    </div>
+    <script src="celebrity.js"></script>
+</body>
+</html>

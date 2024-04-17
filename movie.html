@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    <title>Quizzard</title>
+    <link rel="stylesheet" href="movie.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" id="navbar-logo">QUIZZARD</a>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar-menu">
+                <li class="navbar-item">
+                    <a href="index.html" class="navbar-links" id="home-page">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="music.html" class="navbar-links" id="music-quiz">Music Quiz</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="celebrity.html" class="navbar-links" id="celebrity-quiz">Celebrity Quiz</a>
+                </li>
+                <li class="navbar-btn">
+                    <a href="#stats" class="button" id="stats">Stats</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main -->
+    <div class="main">
+        <div class="main-container">
+            <div class="heading-container">
+                <div class="heading">
+                    <h1>Movie Quiz</h1>
+                </div>
+                <div>
+                    <p class="word-points">Points: </p>
+                    <p id="points"></p>
+                </div>
+            </div>
+            <div class="image-preview">
+                <img id="image1-1" src="image1.1.jpg">
+                <img id="image1-2" src="image1.2.jpg">
+                <img id="image1-3" src="image1.5.jpg">
+                <img id="image1-4" src="image1.3.jpg">
+                <img id="image1-5" src="image1.4.jpg">
+                <img id="image1-6" src="image1.6.jpg">
+            </div>
+            <ul class="image-selection">
+                <button class="select" id="showimage1-1" onclick="showImage1()">1</button>
+                <button class="select" id="showimage1-2" onclick="showImage2()">2</button>
+                <button class="select" id="showimage1-3" onclick="showImage3()">3</button>
+                <button class="select" id="showimage1-4" onclick="showImage4()">4</button>
+                <button class="select" id="showimage1-5" onclick="showImage5()">5</button>
+                <button class="select" id="showimage1-6" onclick="showImage6()">6</button>
+            </ul>
+            <div class="answer">
+                <label for="guess">Answer:</label>
+                <input type="text" class="box" id="guess" value="">
+                <button id="submit" onclick="calcPoints()">Submit</button>
+            </div>
+        </div>
+    </div>
+    <script src="movie.js"></script>
+</body>

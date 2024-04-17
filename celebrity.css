@@ -1,0 +1,475 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    scroll-behavior: smooth;
+    
+}
+
+.navbar {
+    background: black;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar-logo {
+    background-color: tomato;
+    background-image: linear-gradient(to top, red 0%, tomato 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar-item {
+    height: 80px;
+}
+
+.navbar-links {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    text-decoration: none;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.navbar-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #333333;
+    background: -webkit-linear-gradient(to right, #dd1818, #333333);
+    background: linear-gradient(to right, #dd1818, #333333);
+    color: black;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.navbar-links:hover {
+    color: purple;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 960px) {
+    .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar-menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: -1;
+    }
+
+    .navbar-menu.active {
+        background: black;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 60vh;
+        font-size: 1.6rem;
+    }
+
+    #navbar-logo {
+        padding-left: 25px;
+    }
+
+    .navbar-toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease;
+        background: white;
+    }
+
+    .navbar-item {
+        width: 100%;
+    }
+
+    .navbar-links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    .navbar_btn {
+        padding-bottom: 2rem;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar-toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.main {
+    background: #000428;
+    background: -webkit-linear-gradient(to right, #004e92, #020c69);
+    background: linear-gradient(to right, #004e92, #020c69);
+    height: 871px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+    max-width: 1300px;
+    width: 90%;
+    margin: 0 auto;
+    height: 90%;
+    padding: 88px 10px;
+}
+
+.heading-container {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 0 450px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(152, 40, 40);
+}
+
+@media screen and (max-width: 1168px) {
+    .heading {
+        padding: 0 0 0 350px;
+    }
+}
+
+.word-points {
+    display: flex;
+    justify-content: center;
+    margin-right: 30px;
+    font-weight: bold;
+    color: rgb(152, 40, 40);
+    font-size: 20px;
+}
+
+#points {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(152, 40, 40);
+}
+
+.facts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 400px;
+    width: 100%;
+    list-style: none;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.hint {
+    background: white;
+    padding: 5px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+#fact1-2 {
+    visibility: hidden;
+}
+
+#fact1-3 {
+    visibility: hidden;
+}
+
+#fact1-4 {
+    visibility: hidden;
+}
+
+#fact1-5 {
+    visibility: hidden;
+}
+
+#fact1-6 {
+    visibility: hidden;
+}
+
+.answer {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.box {
+    width: 700px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+
+#submit {
+    width: 100px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: rgb(152, 40, 40);
+}
+
+#fact2 {
+    width: 100px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: rgb(152, 40, 40);
+}
+
+#fact3 {
+    width: 100px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: rgb(152, 40, 40);
+}
+
+#fact4 {
+    width: 100px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: rgb(152, 40, 40);
+}
+
+#fact5 {
+    width: 100px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: rgb(152, 40, 40);
+}
+
+#fact6 {
+    width: 100px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: rgb(152, 40, 40);
+}
+
+@media screen and (max-width: 936px) {
+    .heading {
+        padding: 0 0 0 280px;
+    }
+
+    .facts {
+        font-size: 17px;
+    }
+
+    .box {
+        width: 500px;
+    }
+
+    #fact2,
+    #fact3,
+    #fact4,
+    #fact5,
+    #fact6 {
+        width: 80px;
+    }
+
+    #submit {
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 835px) {
+    .heading {
+        font-size: 15px;
+        padding: 0 0 0 230px;
+    }
+}
+
+@media screen and (max-width: 705px) {
+    .heading {
+        font-size: 12px;
+        padding: 0 0 0 200px;
+    }
+
+    .word-points,
+    #points {
+        font-size: 15px;
+    }
+
+    .facts {
+        font-size: 15px;
+    }
+
+    .box {
+        width: 350px;
+    }
+
+    #fact2,
+    #fact3,
+    #fact4,
+    #fact5,
+    #fact6 {
+        width: 60px;
+    }
+}
+
+@media screen and (max-width: 547px) {
+    .heading {
+        font-size: 10px;
+        padding: 0 0 0 120px;
+    }
+
+    .facts {
+        font-size: 12px;
+    }
+
+    .box {
+        width: 250px;
+    }
+
+    #fact2,
+    #fact3,
+    #fact4,
+    #fact5,
+    #fact6 {
+        width: 40px;
+        font-size: 12px;
+    }
+
+    #submit {
+        width: 50px;
+        font-size: 12px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .heading {
+        padding: 0 0 0 100px;
+    }
+}
